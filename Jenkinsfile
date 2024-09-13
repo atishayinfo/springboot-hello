@@ -1,12 +1,11 @@
 pipeline {
     agent any 
     tools {
-        maven "3.8.5"
+        maven "Maven 3.8.5" // Ensure this matches the name in the Global Tool Configuration
     }
     stages {
         stage('Compile and Clean') { 
             steps {
-                // Run Maven on a Unix agent.
                 sh "mvn clean compile"
             }
         }
